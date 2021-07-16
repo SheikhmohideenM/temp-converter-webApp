@@ -5,8 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature-Converter</title>
+
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="assets/font-awesome/css/all.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- google font -->
+    <link rel="stylesheet" href="assets/googleFonts/fonts.css">
 </head>
 <body>
-    <h1>Test</h1>
+    <div class="container">
+        <div class="header">
+            <h2>Temperature-Convertor</h2>
+        </div>
+        <form class="form" name="forms" >
+           <div class="form__control">
+                <input type="number" id="number" class="form__input" name="num" placeholder="00" autocomplete="off">
+           </div>
+           <div class="radio-container">
+                <div class="form__control">
+                    <input type="radio" id="fah-radio-btn" name="radioBtn" value="fah">
+                    <label for="">Fahrenheit</label>
+                </div>
+                <div class="form__control">
+                    <input type="radio" id="cel-radio-btn" name="radioBtn" value="cel">
+                    <label for="">Celsius</label>
+                </div>
+                <div class="form__control">
+                    <input type="radio" id="kel-radio-btn" name="radioBtn" value="kel">
+                    <label for="">Kelvin</label>
+                </div>
+           </div>
+            <div class="result-field"></div>
+       <button class="btn" type="button"  onclick="temperature()">Convert</button>
+    </form>
+    </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
