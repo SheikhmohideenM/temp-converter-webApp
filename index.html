@@ -10,30 +10,36 @@
     <link rel="stylesheet" href="assets/font-awesome/css/all.css">
     <!-- custom css -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- google font -->
+    <link rel="stylesheet" href="assets/googleFonts/fonts.css">
 </head>
 <body>
     <div class="container">
-        <h2 class="title">Temperature-Converter</h2>
-        <form class="form-control">
-            <div class="input-field">
-                <i class="fa fa-thermometer-three-quarters"></i>
-                <input type="number" class="input-area" placeholder="00">
-            </div>
-            <div class="radio-field">
-                <div class="radio-btn">
-                    <input type="radio" class="radio-button">
-                    <label for="" class="lable-name">Fahrenheit</label>
+        <div class="header">
+            <h2>Temperature-Convertor</h2>
+        </div>
+        <form class="form" name="forms" >
+           <div class="form__control">
+                <input type="number" id="number" class="form__input" name="num" placeholder="00" autocomplete="off">
+           </div>
+           <div class="radio-container">
+                <div class="form__control">
+                    <input type="radio" id="fah-radio-btn" name="radioBtn" value="fah">
+                    <label for="">Fahrenheit</label>
                 </div>
-                <div class="radio-btn">
-                    <input type="radio" class="radio-button">
-                    <label for="" class="lable-name">Celsius</label>
+                <div class="form__control">
+                    <input type="radio" id="cel-radio-btn" name="radioBtn" value="cel">
+                    <label for="">Celsius</label>
                 </div>
-                <div class="radio-btn">
-                    <input type="radio" class="radio-button">
-                    <label for="" class="lable-name">Kelvin</label>
+                <div class="form__control">
+                    <input type="radio" id="kel-radio-btn" name="radioBtn" value="kel">
+                    <label for="">Kelvin</label>
                 </div>
-            </div>
-        </form>
+           </div>
+            <div class="result-field"></div>
+       <button class="btn" type="button"  onclick="temperature()">Convert</button>
+    </form>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
